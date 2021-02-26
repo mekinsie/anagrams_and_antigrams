@@ -35,8 +35,13 @@ describe('Word#check') do
     words = Word.new("Spicy", "Mellow")
     expect(words.aa_check).to(eq("These two words are not anagrams but are antigrams."))
   end
-  it("should account for multiple words being anagrams or antigrams") do
+  it("should check if inputs are neither antigrams or anagrams.") do
+    words = Word.new("Hot", "Cold")
+    expect(words.aa_check).to(eq("These two words are not anagrams or antigrams"))
+  end
+  it("should account for multiple words being anagrams") do
     words = Word.new("Dormitory", "Dirty room")
     expect(words.aa_check).to(eq("These two words are anagrams."))
   end
+
 end

@@ -13,8 +13,10 @@ class Word
       "Please enter a valid word."
     elsif letters2.all? { |letter| letters1.include?(letter) }  
       "These two words are anagrams."
+  elsif letters2.all? { |letter| !letters1.include?(letter) }  
+  "These two words are not anagrams but are antigrams."
     else
-    "These two words are not anagrams"
+    "These two words are not anagrams or antigrams"
     end 
   end  
 end

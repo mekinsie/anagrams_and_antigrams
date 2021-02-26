@@ -31,8 +31,8 @@ describe('Word#check') do
     words = Word.new("Htt", "Cdfld")
     expect(words.aa_check).to(eq("Please enter a valid word."))
   end
-  # it("should check if the words are antigrams if they are not anagrams") do
-  #   words = Word.new("Hot", "Cold")
-  #   expect(words.aa_check).to(eq("These two words are not anagrams but are antigrams."))
-  # end
+  it("should check if the words are antigrams if they are not anagrams") do
+    words = Word.new("Hot", "Cold")
+    expect(words.aa_check).to(eq("These two words are not anagrams but are antigrams."))
+  end
 end

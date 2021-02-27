@@ -28,7 +28,7 @@ describe('Word#anagram') do
     expect(words.anagram).to(eq("These words are anagrams, all 9 letters match."))
   end
   it("should return how many letters from the argument are actual matches with the reciever") do
-    words = Word.new("Dormitory", "Dirty room")
-    expect(words.anagram).to(eq("These words are anagrams, all 9 letters match."))
+    words = Word.new("Astronomer", "Moon starer")
+    expect(words.anagram).to(eq("These words are anagrams, all 10 letters match."))
   end
 end

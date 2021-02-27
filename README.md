@@ -1,55 +1,61 @@
 # _Anagrams and Antigrams_
 
-#### This app will recognize anagrams .
+#### This app will check if two inputs are anagrams or antigrams
 
 #### By _**Mekinsie Callahan**_
 
 ## Technologies Used
 
-* _CSS_
-* _HTML5_
-* _Bootstrap_
-* _JavaScript_
-* _jQuery_
+* Ruby
+* Docker
+* Bundler
+* RSpec
 
 ## Description
 
-_Select and customize your own pizza! The purpose of this application is to practice object-oriented javascript and object prototypes. When you select a pizza size and toppings, the price of the pizza will change._
-## Description
+This project will take in two inputs and determine if they anagrams, antigrams or neither. It will also return how many letters in the two inputs match. The purpose of this project was to practice using Test-Driven Development with Ruby. 
 
-This template repository includes a basic setup for using Docker to run RSpec tests, Pry, and Ruby scripts using Ruby 2.6.5. 
+## Installation & Requirements
+**Ruby or Docker is required to run this application**
 
-To use Docker, you will first need to [install](https://docs.docker.com/get-docker/) it. Once it's installed, Docker should be open so you can actually run Docker commands in the terminal.
+1. Navigate to the desired directory where you would like to clone the project to.
 
-## Running IRB
-
-You don't need this setup for running IRB (Ruby REPL) by itself. To use IRB on its own, do the following (after Docker is installed and open):
-
+2. Once you have chosen your desired directory, clone the github repo into it by typing the following command into your terminal:
+```bash 
+$ git clone https://github.com/mekinsie/anagrams_and_antigrams
 ```
-$ docker pull ruby:2.6.5
+3. Open the project in VSCode by typing the following in your terminal:
+
+``` bash
+$ code .
+```  
+**If you are using Docker, skip steps 4 & 5.**  
+
+4. Install gem bundler by typing:
+
+``` bash
+$ gem install bundler
+```  
+
+5. Install gem bundles by typing:
+
+``` bash
+$ bundle
 ```
 
-This pulls down the image of Ruby we use at Epicodus. You only need to do this once.
+## Running Tests
 
-Once you have it on your machine, you can run IRB with the following command:
-
+**Run tests using Ruby (no Docker):**  
+If you have Ruby already installed, simply type "rspec" into your terminal while located in the root directory of the project.
+``` bash
+$ rspec
 ```
-$ docker run -it ruby:2.6.5 irb
-```
 
-We recommend creating an alias (called something like `dirb` for Docker IRB) to make the command easier to use.
+**Run tests using Docker:**
 
-You can exit IRB as normal by typing `exit`.
+To use Docker, you will first need to [install](https://docs.docker.com/get-docker/) it. Once it's installed, Docker should be open so you can actually run Docker commands in the terminal.  
 
-## Using This Repository for Docker
-
-This repository is a template repository. To use it, start by creating a new repository with `ruby-rspec-docker-container` as a template. Clone that repository down to your desktop.
-
-The repository contains a simple project that tests a simple `title_case` method. To run tests on the current code, simply run the command `docker-compose up` in the root directory of this project.
-
-To run tests on your own code, replace the `lib` and `spec` directories with your own source code (for `lib`) and tests (for `spec`).
-
-We recommend creating an alias for the following commands. The alias should look something like this:
+We recommend creating an alias for the following commands. The alias should look something like this:  
 
 ```
 dspec ()
@@ -60,44 +66,22 @@ dspec ()
 }
 ```
 
-With this alias, the `dspec` command will automatically run RSpec tests. You can use `binding.pry` as needed.
+With this alias, the `dspec` command will automatically run RSpec tests. If you prefer not to use an alias, simply type each of the aforementioned commands into your terminal.
 
-### Running Scripts
 
-Running scripts is optional at Epicodus. However, if you want to experiment with it, follow these steps:
+## Running scripts 
 
-* The script must be located in `lib` and be called `script.rb`.
+**Run scripts in your terminal (must have Ruby already installed):**
 
+* While located in the root directory of the project, type the following in your terminal to run the script:
+
+```bash
+$ ruby lib/script.rb
+```
+
+**Run scripts in Docker**
 * Run the following command: `docker-compose run --rm app ruby lib/script.rb`.
-
-Once again, we recommend aliasing this command if you plan to run scripts often. If you prefer to name your script something else, you just need to update the command to use the correct path and file name.
-
-
-## Setup/Installation Requirements
-View this webpage directly via: https://mekinsie.github.io/choose-your-pizza/
-
-Download the repo:
-* Go to https://github.com/mekinsie/choose-your-pizza
-* Navigate to and click the green <img src="code.PNG" alt="code" height="20"> button on middle upper right part of webpage.
-* Click on "Download ZIP"
-* Navigate to the downloaded zip and open it.
-* Open the folder inside the zip.
-* Double-click on the HTML file to open it in your default browser.
-
-Clone the repo:
-* Go to https://github.com/mekinsie/choose-your-pizza
-* Navigate to and click the green <img src="code.PNG" alt="code" height="20"> button on middle upper right part of webpage.
-* Copy the HTTPs address to your clipboard.
-* Open terminal or bash and navigate to the directory you wish to download the repo to.
-* Once you have chosen your desired directory, open your terminal, type "git clone [paste link]" and press enter:
-```bash 
-$ git clone https://github.com/mekinsie/choose-your-pizza
-```
-* To open the folder in your default code editor, navigate to the downloaded folder and type "code ." into your terminal:
-``` bash
-$ code .
-```
-* To view the html file in your default browser from your cloned repo, double-click on the HTML file in the directory.
+We recommend aliasing this command if you plan to run scripts often.
 
 ## Known Bugs
 

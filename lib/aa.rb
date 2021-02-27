@@ -6,9 +6,7 @@ class Word
   def anagram
     letters1 = @word1.downcase.gsub(/[!@#$%^&*().,:;'~`]/,'').gsub(/\s/,'').split("")
     letters2 = @word2.downcase.gsub(/[!@#$%^&*().,:;'~`]/,'').gsub(/\s/,'').split("")
-    
-    count_match_letters(letters1, letters2)
-
+    matching_letters(letters1, letters2)
     if @word1.gsub(/[AEIOUaeiou]/, '').length == @word1.length || @word2.gsub(/[AEIOUaeiou]/, '').length == @word2.length
       "Please enter a valid word."
     elsif letters2.all? { |letter| letters1.include?(letter) }  
@@ -19,8 +17,7 @@ class Word
       "These words are not anagrams or antigrams but #{@letters_match.length} letter(s) match."
     end 
   end 
-
-  def count_match_letters(letters1, letters2)
+  def matching_letters(letters1, letters2)
     @letters_match = []
     letters1.each do |letter|
       if letters2.include?(letter)
@@ -28,5 +25,4 @@ class Word
       end
     end
   end
-
 end
